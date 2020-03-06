@@ -124,11 +124,13 @@ MacBuild {
 
     contains(QT_ARCH, i386) {
         LIBS += -L$$BASEDIR/libs/lib/sdl2/msvc/lib/x86
+        message("Qt 32-bit")
     } else {
         LIBS += -L$$BASEDIR/libs/lib/sdl2/msvc/lib/x64
+        message("Qt 64-bit")
     }
     LIBS += \
-        -lSDL2main \
+        #-lSDL2main \
         -lSDL2
 }
 
